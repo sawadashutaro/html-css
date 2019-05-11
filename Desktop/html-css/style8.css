@@ -4,6 +4,12 @@
 	box-sizing:border-box;
 }
 
+.clearfix{
+	content:"";
+	display:block;
+	clear:both;
+}
+
 main{
 	width:960px;
 	margin:50px auto;
@@ -17,23 +23,6 @@ section{
 section:nth-child(2){
 	margin:0 30px;
 }
-.image{
-	height:190px;
-	width:280px;
-	margin:10px;
-	height:30px;
-	background-size:cover;
-	background-position:;
-}
-#img1{
-	background-image:url("img/flow01.png");
-}
-#img2{
-	background-image:url("img/flow02.png");
-}
-#img3{
-	background-image:url("img/flow03.png");
-}
 
 img{
 	width:280px;
@@ -45,6 +34,39 @@ div{
 	color:#fff;
 	background-color:orange;
 	text-align:center;
-	display: inline-block;
 	position:absolute;
+	top:0;
+	left:0;
+}
+
+@media screen and (max-width:768px){
+	section{
+		width:90%;
+		float:none;
+		padding:10px;
+		position:relative;
+	}
+	section:nth-child(2){
+		margin:20px 0;
+	}
+	main{
+		margin:50px 0;
+	}
+	img{
+		object-fit:cover;
+		width:100%;
+		height:50%;
+		margin:0;
+	}
+	p{
+		font-size:25px;
+	}
+	h2{
+		font-size:30px;
+	}
+	div{
+		width:90px;
+		height:50px;
+		font-size:30px;
+	}
 }
